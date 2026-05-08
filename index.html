@@ -45,11 +45,6 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-        /* Custom Scrollbar untuk Wireframe & Horizontal Scroll */
-        .wireframe-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
-        .wireframe-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
-        .wireframe-scroll::-webkit-scrollbar-thumb { background-color: rgba(124, 158, 217, 0.4); border-radius: 10px; }
-        .wireframe-scroll::-webkit-scrollbar-thumb:hover { background-color: rgba(124, 158, 217, 0.8); }
     </style>
 </head>
 <body class="p-4 sm:p-8 md:p-12 text-gray-200 antialiased font-sans">
@@ -64,7 +59,7 @@
                 <p class="text-gray-400 font-medium">Design System, Checkout Flow & Full Layout Guidelines</p>
             </div>
             <div class="text-left md:text-right relative z-10">
-                <p class="text-sm text-gray-500 font-mono">Version 4.0 (Complete Web Structure)</p>
+                <p class="text-sm text-gray-500 font-mono">Version 5.0 (Figma Ready - Flat Layout)</p>
                 <p class="text-sm text-brandMindaro font-mono">Glassmorphism Premium</p>
             </div>
         </div>
@@ -112,22 +107,22 @@
             </div>
         </div>
 
-        <!-- SECTION 2: COMPONENTS -->
+        <!-- SECTION 2: COMPONENTS (Checkout Ditata Ke Bawah) -->
         <div class="space-y-6">
             <h2 class="text-2xl font-bold text-gray-400 uppercase tracking-widest pl-3 border-l-4 border-brandButter">2. UI Components & Flow</h2>
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 
                 <!-- KIRI: BUTTONS & GLASS CARDS -->
-                <div class="space-y-8">
+                <div class="space-y-8 lg:col-span-7">
                     <!-- Buttons -->
                     <div class="bg-boardPanel rounded-3xl shadow-lg border border-gray-800 p-8">
                         <h3 class="text-lg font-bold text-white mb-6 border-b border-gray-700 pb-2">Buttons</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <button class="w-full bg-gradient-to-r from-brandVista via-brandSky to-brandMindaro animate-gradient backdrop-blur-lg border border-white/50 text-brandDark font-bold py-3 rounded-full shadow-md text-sm">Primary Gradient</button>
                             <button class="w-full bg-brandDark text-white font-bold py-3 rounded-full shadow-md text-sm border border-gray-600">Secondary Solid</button>
-                            <button class="w-full bg-white/10 border border-brandSky text-brandSky font-bold py-3 rounded-xl shadow-sm text-sm hover:bg-white/20">Outline Action</button>
-                            <button class="w-full bg-gray-800 text-gray-400 font-bold py-3 rounded-xl shadow-sm text-sm cursor-not-allowed">Disabled State</button>
+                            <button class="w-full bg-white/10 border border-brandSky text-brandSky font-bold py-3 rounded-xl shadow-sm text-sm">Outline Action</button>
+                            <button class="w-full bg-gray-800 text-gray-400 font-bold py-3 rounded-xl shadow-sm text-sm">Disabled State</button>
                         </div>
                     </div>
 
@@ -161,21 +156,20 @@
                     </div>
                 </div>
 
-                <!-- KANAN: CHECKOUT FLOW (HORIZONTAL SCROLL) -->
-                <div class="bg-boardPanel grid-pattern rounded-3xl shadow-lg border border-gray-800 p-8 h-full relative overflow-hidden flex flex-col">
+                <!-- KANAN: CHECKOUT FLOW (DISUSUN KE BAWAH) -->
+                <div class="bg-boardPanel grid-pattern rounded-3xl shadow-lg border border-gray-800 p-8 relative overflow-hidden flex flex-col lg:col-span-5">
                     <div class="absolute top-10 left-10 w-48 h-48 bg-brandSky/30 rounded-full blur-3xl z-0 pointer-events-none"></div>
-                    <div class="absolute bottom-10 right-10 w-48 h-48 bg-brandVista/20 rounded-full blur-3xl z-0 pointer-events-none"></div>
-
-                    <div class="flex justify-between items-end mb-6 border-b border-gray-700 pb-2 relative z-10">
+                    
+                    <div class="mb-6 border-b border-gray-700 pb-2 relative z-10">
                         <h3 class="text-lg font-bold text-white">Checkout Flow Modals</h3>
-                        <span class="text-xs text-brandSky animate-pulse">Geser Kanan &rarr;</span>
+                        <p class="text-xs text-brandSky">Diurutkan ke bawah</p>
                     </div>
                     
-                    <!-- Horizontal Scroll Container -->
-                    <div class="flex overflow-x-auto gap-6 pb-6 wireframe-scroll relative z-10 flex-grow snap-x">
+                    <!-- Vertical Stack Container -->
+                    <div class="flex flex-col gap-6 relative z-10 w-full max-w-sm mx-auto">
                         
                         <!-- 1. Form Data Pengiriman -->
-                        <div class="min-w-[280px] w-[280px] bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-5 flex flex-col snap-center h-fit">
+                        <div class="w-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-5 flex flex-col">
                             <div class="flex justify-between items-center mb-4">
                                 <h4 class="text-base font-bold text-white font-serif">1. Data Pengiriman</h4>
                                 <span class="text-[10px] text-brandSky bg-brandSky/10 px-2 py-1 rounded">2 Item</span>
@@ -200,7 +194,7 @@
                         </div>
 
                         <!-- 2. Pilih Pembayaran (QRIS / CASH) -->
-                        <div class="min-w-[280px] w-[280px] bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-5 flex flex-col snap-center h-fit">
+                        <div class="w-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-5 flex flex-col">
                             <h4 class="text-base font-bold text-white font-serif mb-1">2. Checkout</h4>
                             <p class="text-[10px] text-gray-400 mb-4">Pilih metode pembayaran</p>
                             
@@ -226,7 +220,7 @@
                         </div>
 
                         <!-- 3. Scan QRIS -->
-                        <div class="min-w-[280px] w-[280px] bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-5 flex flex-col snap-center h-fit text-center">
+                        <div class="w-full bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl rounded-2xl p-5 flex flex-col text-center">
                             <h4 class="text-base font-bold text-white font-serif mb-1">3. Scan QRIS</h4>
                             <p class="text-[10px] text-gray-400 mb-4">Gunakan m-Banking atau GoPay/OVO</p>
                             
@@ -247,241 +241,229 @@
             </div>
         </div>
 
-        <!-- SECTION 3: LANDING PAGE LAYOUTS (FULL SCROLLABLE) -->
+        <!-- SECTION 3: LANDING PAGE LAYOUTS (FLAT / TERBUKA) -->
         <div class="space-y-6 pb-20">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end pl-3 border-l-4 border-brandMindaro gap-2">
-                <h2 class="text-2xl font-bold text-gray-400 uppercase tracking-widest">3. Complete Landing Page Structure</h2>
-                <div class="bg-brandMindaro/20 border border-brandMindaro/50 px-3 py-1.5 rounded-lg flex items-center gap-2">
-                    <span class="text-brandMindaro animate-pulse text-lg">🖱️</span>
-                    <span class="text-xs text-brandMindaro font-bold">Arahkan kursor & Scroll UI Device di bawah!</span>
-                </div>
+            <div class="flex flex-col pl-3 border-l-4 border-brandMindaro gap-2 mb-8">
+                <h2 class="text-2xl font-bold text-gray-400 uppercase tracking-widest">3. Complete Landing Page Layouts</h2>
+                <p class="text-xs text-brandMindaro">Rendered full-height untuk konversi Figma (Tanpa Mockup Device)</p>
             </div>
             
-            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
                 
-                <!-- Desktop Full Layout Miniature -->
-                <div class="xl:col-span-2 bg-boardPanel grid-pattern rounded-3xl shadow-lg border border-gray-800 p-8 relative flex flex-col items-center justify-center min-h-[600px]">
-                    <h3 class="absolute top-6 left-8 text-lg font-bold text-white mb-6 border-b pb-2 border-gray-700 z-20">Desktop Web (Scrollable)</h3>
-
-                    <!-- Frame Layar Laptop -->
-                    <div class="w-full max-w-4xl h-[500px] bg-[#121212] rounded-t-2xl border-x-4 border-t-4 border-gray-700 shadow-2xl relative overflow-hidden mt-8">
+                <!-- Desktop Full Layout (Terbuka) -->
+                <div class="xl:col-span-8 bg-[#121212] rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col w-full">
+                    
+                    <div class="bg-gray-900 text-gray-500 text-xs text-center py-2 border-b border-gray-800 uppercase tracking-widest font-bold">Desktop Web Layout</div>
+                    
+                    <!-- Content Full Desktop -->
+                    <div class="relative w-full pb-16">
                         
-                        <!-- Content Layar Laptop -->
-                        <div class="absolute inset-0 overflow-y-auto wireframe-scroll">
-                            
-                            <!-- Navbar Static -->
-                            <div class="sticky top-4 mx-8 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-between px-6 z-50">
-                                <div class="flex items-center gap-2"><div class="w-8 h-8 bg-brandVista rounded-full"></div><div class="w-16 h-3 bg-white/50 rounded"></div></div>
-                                <div class="flex gap-6"><div class="w-12 h-2 bg-gray-400 rounded"></div><div class="w-16 h-2 bg-gray-400 rounded"></div><div class="w-12 h-2 bg-gray-400 rounded"></div><div class="w-20 h-2 bg-gray-400 rounded"></div><div class="w-16 h-2 bg-gray-400 rounded"></div></div>
-                                <div class="w-8 h-8 bg-white/20 rounded-full"></div>
-                            </div>
-                            
-                            <!-- 1. Hero Section -->
-                            <div class="h-[450px] w-full relative flex flex-col justify-center px-12 border-b border-gray-800 -mt-16 pt-16">
-                                <div class="absolute top-10 right-20 w-64 h-64 bg-brandMindaro/20 rounded-full blur-3xl pointer-events-none"></div>
-                                <div class="w-full grid grid-cols-2 gap-8 items-center relative z-10">
-                                    <div class="space-y-4">
-                                        <div class="w-32 h-6 bg-brandButter/80 rounded-full"></div>
-                                        <div class="w-full h-12 bg-brandSky rounded-lg"></div>
-                                        <div class="w-3/4 h-12 bg-brandVista rounded-lg"></div>
-                                        <div class="space-y-2 py-2"><div class="w-full h-2 bg-gray-500 rounded"></div><div class="w-5/6 h-2 bg-gray-500 rounded"></div></div>
-                                        <div class="flex gap-3"><div class="w-32 h-10 bg-brandDark rounded-full"></div><div class="w-32 h-10 border border-gray-500 rounded-full"></div></div>
-                                    </div>
-                                    <div class="h-64 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center border border-white/20 shadow-xl"><div class="w-24 h-24 bg-brandVista rounded-full shadow-lg"></div></div>
+                        <!-- Navbar Static -->
+                        <div class="mx-8 mt-6 h-12 bg-white/10 backdrop-blur-md rounded-full border border-white/20 flex items-center justify-between px-6 z-50 relative">
+                            <div class="flex items-center gap-2"><div class="w-8 h-8 bg-brandVista rounded-full"></div><div class="w-16 h-3 bg-white/50 rounded"></div></div>
+                            <div class="flex gap-6"><div class="w-12 h-2 bg-gray-400 rounded"></div><div class="w-16 h-2 bg-gray-400 rounded"></div><div class="w-12 h-2 bg-gray-400 rounded"></div><div class="w-20 h-2 bg-gray-400 rounded"></div><div class="w-16 h-2 bg-gray-400 rounded"></div></div>
+                            <div class="w-8 h-8 bg-white/20 rounded-full"></div>
+                        </div>
+                        
+                        <!-- 1. Hero Section -->
+                        <div class="min-h-[450px] w-full relative flex flex-col justify-center px-12 border-b border-gray-800 pt-8">
+                            <div class="absolute top-10 right-20 w-64 h-64 bg-brandMindaro/20 rounded-full blur-3xl pointer-events-none"></div>
+                            <div class="w-full grid grid-cols-2 gap-8 items-center relative z-10">
+                                <div class="space-y-4">
+                                    <div class="w-32 h-6 bg-brandButter/80 rounded-full"></div>
+                                    <div class="w-full h-12 bg-brandSky rounded-lg"></div>
+                                    <div class="w-3/4 h-12 bg-brandVista rounded-lg"></div>
+                                    <div class="space-y-2 py-2"><div class="w-full h-2 bg-gray-500 rounded"></div><div class="w-5/6 h-2 bg-gray-500 rounded"></div></div>
+                                    <div class="flex gap-3"><div class="w-32 h-10 bg-brandDark rounded-full"></div><div class="w-32 h-10 border border-gray-500 rounded-full"></div></div>
                                 </div>
-                            </div>
-
-                            <!-- 2. About Us Section -->
-                            <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center relative">
-                                <div class="w-48 h-10 bg-brandSky rounded-lg mb-4"></div>
-                                <div class="w-64 h-3 bg-gray-600 rounded mb-12"></div>
-                                
-                                <div class="w-full h-64 bg-white/5 border-2 border-dashed border-gray-600 rounded-3xl mb-12 flex items-center justify-center text-gray-500 font-mono text-sm">📸 Foto Utama Organisasi</div>
-                                
-                                <div class="grid grid-cols-2 gap-8 w-full mb-12">
-                                    <div class="h-40 bg-white/5 rounded-3xl p-6 border border-white/5"><div class="w-24 h-5 bg-brandButter rounded mb-4"></div><div class="w-full h-2 bg-gray-500 rounded mb-2"></div><div class="w-3/4 h-2 bg-gray-500 rounded"></div></div>
-                                    <div class="h-40 bg-white/5 rounded-3xl p-6 border border-white/5"><div class="w-24 h-5 bg-brandButter rounded mb-4"></div><div class="w-full h-2 bg-gray-500 rounded mb-2"></div><div class="w-full h-2 bg-gray-500 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-500 rounded"></div></div>
-                                </div>
-                                
-                                <div class="w-full h-64 bg-white/5 rounded-3xl p-8 flex gap-8 border border-white/5">
-                                    <div class="w-1/3 h-full bg-white/10 rounded-2xl flex items-center justify-center text-2xl">🎨</div>
-                                    <div class="w-2/3 flex flex-col justify-center gap-4">
-                                        <div class="w-48 h-6 bg-brandSky rounded mb-2"></div>
-                                        <div><div class="w-32 h-3 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                        <div><div class="w-32 h-3 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 3. News Section -->
-                            <div class="py-20 px-16 border-b border-gray-800">
-                                <div class="flex justify-between items-end mb-10">
-                                    <div><div class="w-40 h-10 bg-brandSky rounded-lg mb-3"></div><div class="w-64 h-3 bg-gray-600 rounded"></div></div>
-                                    <div class="w-32 h-10 bg-white/10 rounded-full"></div>
-                                </div>
-                                <div class="grid grid-cols-3 gap-6">
-                                    <div class="h-64 bg-white/10 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-xl mb-4"></div><div class="w-full h-4 bg-gray-400 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="h-64 bg-white/10 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-xl mb-4"></div><div class="w-full h-4 bg-gray-400 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="h-64 bg-white/10 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-xl mb-4"></div><div class="w-full h-4 bg-gray-400 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-600 rounded"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- 4. Company Profile Section (NEW) -->
-                            <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center bg-white/5">
-                                <div class="w-64 h-10 bg-brandVista rounded-lg mb-4"></div>
-                                <div class="w-72 h-3 bg-gray-600 rounded mb-12"></div>
-                                
-                                <!-- Eksekutif -->
-                                <div class="w-full h-80 bg-white/10 rounded-[3rem] p-10 flex gap-10 mb-12 border border-white/10 shadow-lg">
-                                    <div class="w-1/2 h-full bg-white/5 border-2 border-dashed border-brandVista/50 rounded-3xl flex items-center justify-center text-xs text-gray-500">👔 Foto Eksekutif</div>
-                                    <div class="w-1/2 flex flex-col justify-center gap-6">
-                                        <div><div class="w-32 h-4 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                        <div><div class="w-32 h-4 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                        <div><div class="w-32 h-4 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                    </div>
-                                </div>
-
-                                <!-- Fungsional Grid -->
-                                <div class="grid grid-cols-3 gap-6 w-full">
-                                    <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- 5. Marketplace Section -->
-                            <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center">
-                                <div class="w-64 h-10 bg-brandButter/80 rounded-lg mb-4"></div>
-                                <div class="w-56 h-3 bg-gray-600 rounded mb-12"></div>
-                                
-                                <div class="grid grid-cols-4 gap-6 w-full">
-                                    <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                    <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                    <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                    <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- 6. SOP Section -->
-                            <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center">
-                                <div class="w-56 h-10 bg-brandMindaro/80 rounded-lg mb-4"></div>
-                                <div class="w-64 h-3 bg-gray-600 rounded mb-12"></div>
-                                
-                                <div class="grid grid-cols-2 gap-8 w-full">
-                                    <div class="h-32 bg-white/10 rounded-3xl border-t-4 border-brandVista p-6 flex flex-col items-center justify-center gap-3"><div class="w-10 h-10 bg-white/10 rounded-xl"></div><div class="w-1/2 h-3 bg-gray-400 rounded"></div></div>
-                                    <div class="h-32 bg-white/10 rounded-3xl border-t-4 border-brandMindaro p-6 flex flex-col items-center justify-center gap-3"><div class="w-10 h-10 bg-white/10 rounded-xl"></div><div class="w-1/2 h-3 bg-gray-400 rounded"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- 7. Footer -->
-                            <div class="py-16 px-16 bg-brandDark/50 border-t-4 border-brandVista">
-                                <div class="flex justify-between items-center mb-8"><div class="w-40 h-8 bg-gray-400 rounded"></div><div class="flex gap-3"><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div></div></div>
-                                <div class="w-full border-t border-gray-600 pt-6 flex justify-between"><div class="w-48 h-3 bg-gray-600 rounded"></div><div class="w-24 h-3 bg-gray-600 rounded"></div></div>
+                                <div class="h-64 bg-white/10 backdrop-blur-md rounded-3xl flex items-center justify-center border border-white/20 shadow-xl"><div class="w-24 h-24 bg-brandVista rounded-full shadow-lg"></div></div>
                             </div>
                         </div>
+
+                        <!-- 2. About Us Section -->
+                        <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center relative">
+                            <div class="w-48 h-10 bg-brandSky rounded-lg mb-4"></div>
+                            <div class="w-64 h-3 bg-gray-600 rounded mb-12"></div>
+                            
+                            <div class="w-full h-64 bg-white/5 border-2 border-dashed border-gray-600 rounded-3xl mb-12 flex items-center justify-center text-gray-500 font-mono text-sm">📸 Foto Utama Organisasi</div>
+                            
+                            <div class="grid grid-cols-2 gap-8 w-full mb-12">
+                                <div class="h-40 bg-white/5 rounded-3xl p-6 border border-white/5"><div class="w-24 h-5 bg-brandButter rounded mb-4"></div><div class="w-full h-2 bg-gray-500 rounded mb-2"></div><div class="w-3/4 h-2 bg-gray-500 rounded"></div></div>
+                                <div class="h-40 bg-white/5 rounded-3xl p-6 border border-white/5"><div class="w-24 h-5 bg-brandButter rounded mb-4"></div><div class="w-full h-2 bg-gray-500 rounded mb-2"></div><div class="w-full h-2 bg-gray-500 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-500 rounded"></div></div>
+                            </div>
+                            
+                            <div class="w-full h-64 bg-white/5 rounded-3xl p-8 flex gap-8 border border-white/5">
+                                <div class="w-1/3 h-full bg-white/10 rounded-2xl flex items-center justify-center text-2xl">🎨</div>
+                                <div class="w-2/3 flex flex-col justify-center gap-4">
+                                    <div class="w-48 h-6 bg-brandSky rounded mb-2"></div>
+                                    <div><div class="w-32 h-3 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                    <div><div class="w-32 h-3 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. News Section -->
+                        <div class="py-20 px-16 border-b border-gray-800">
+                            <div class="flex justify-between items-end mb-10">
+                                <div><div class="w-40 h-10 bg-brandSky rounded-lg mb-3"></div><div class="w-64 h-3 bg-gray-600 rounded"></div></div>
+                                <div class="w-32 h-10 bg-white/10 rounded-full"></div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-6">
+                                <div class="h-64 bg-white/10 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-xl mb-4"></div><div class="w-full h-4 bg-gray-400 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-600 rounded"></div></div>
+                                <div class="h-64 bg-white/10 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-xl mb-4"></div><div class="w-full h-4 bg-gray-400 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-600 rounded"></div></div>
+                                <div class="h-64 bg-white/10 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-xl mb-4"></div><div class="w-full h-4 bg-gray-400 rounded mb-2"></div><div class="w-2/3 h-2 bg-gray-600 rounded"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Company Profile Section -->
+                        <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center bg-white/5">
+                            <div class="w-64 h-10 bg-brandVista rounded-lg mb-4"></div>
+                            <div class="w-72 h-3 bg-gray-600 rounded mb-12"></div>
+                            
+                            <!-- Eksekutif -->
+                            <div class="w-full h-80 bg-white/10 rounded-[3rem] p-10 flex gap-10 mb-12 border border-white/10 shadow-lg">
+                                <div class="w-1/2 h-full bg-white/5 border-2 border-dashed border-brandVista/50 rounded-3xl flex items-center justify-center text-xs text-gray-500">👔 Foto Eksekutif</div>
+                                <div class="w-1/2 flex flex-col justify-center gap-6">
+                                    <div><div class="w-32 h-4 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                    <div><div class="w-32 h-4 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                    <div><div class="w-32 h-4 bg-gray-400 rounded mb-2"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                </div>
+                            </div>
+
+                            <!-- Fungsional Grid -->
+                            <div class="grid grid-cols-3 gap-6 w-full">
+                                <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                                <div class="h-48 bg-white/5 rounded-3xl p-5 border border-white/10"><div class="w-32 h-4 bg-brandSky rounded mb-4"></div><div class="w-full h-16 bg-white/5 rounded-xl border border-dashed border-gray-600 mb-3"></div><div class="w-full h-2 bg-gray-600 rounded"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Marketplace Section -->
+                        <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center">
+                            <div class="w-64 h-10 bg-brandButter/80 rounded-lg mb-4"></div>
+                            <div class="w-56 h-3 bg-gray-600 rounded mb-12"></div>
+                            
+                            <div class="grid grid-cols-4 gap-6 w-full">
+                                <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                                <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                                <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                                <div class="aspect-[3/4] bg-white/5 rounded-3xl border border-white/10 flex flex-col p-4"><div class="flex-grow bg-white/5 rounded-2xl mb-4"></div><div class="h-3 w-3/4 bg-gray-400 rounded mb-2"></div><div class="h-8 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 6. SOP Section -->
+                        <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center">
+                            <div class="w-56 h-10 bg-brandMindaro/80 rounded-lg mb-4"></div>
+                            <div class="w-64 h-3 bg-gray-600 rounded mb-12"></div>
+                            
+                            <div class="grid grid-cols-2 gap-8 w-full">
+                                <div class="h-32 bg-white/10 rounded-3xl border-t-4 border-brandVista p-6 flex flex-col items-center justify-center gap-3"><div class="w-10 h-10 bg-white/10 rounded-xl"></div><div class="w-1/2 h-3 bg-gray-400 rounded"></div></div>
+                                <div class="h-32 bg-white/10 rounded-3xl border-t-4 border-brandMindaro p-6 flex flex-col items-center justify-center gap-3"><div class="w-10 h-10 bg-white/10 rounded-xl"></div><div class="w-1/2 h-3 bg-gray-400 rounded"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Footer -->
+                        <div class="py-16 px-16 bg-brandDark/50 border-t-4 border-brandVista">
+                            <div class="flex justify-between items-center mb-8"><div class="w-40 h-8 bg-gray-400 rounded"></div><div class="flex gap-3"><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div></div></div>
+                            <div class="w-full border-t border-gray-600 pt-6 flex justify-between"><div class="w-48 h-3 bg-gray-600 rounded"></div><div class="w-24 h-3 bg-gray-600 rounded"></div></div>
+                        </div>
+
                     </div>
-                    <!-- Laptop Bottom Base -->
-                    <div class="w-full max-w-[55rem] h-5 bg-gray-700 rounded-b-2xl shadow-2xl z-10 flex items-center justify-center"><div class="w-20 h-1 bg-gray-500 rounded-full opacity-50"></div></div>
                 </div>
 
-                <!-- Mobile Full Layout Miniature -->
-                <div class="xl:col-span-1 bg-boardPanel grid-pattern rounded-3xl shadow-lg border border-gray-800 p-8 relative flex flex-col items-center justify-center min-h-[600px]">
-                    <h3 class="absolute top-6 left-8 text-lg font-bold text-white mb-6 border-b pb-2 border-gray-700 z-20">Mobile App (Scrollable)</h3>
+                <!-- Mobile Full Layout (Terbuka) -->
+                <div class="xl:col-span-4 bg-[#121212] rounded-3xl border border-gray-800 shadow-2xl relative overflow-hidden flex flex-col w-full max-w-[375px] mx-auto xl:mx-0">
                     
-                    <!-- Frame Smartphone -->
-                    <div class="w-72 h-[520px] bg-[#121212] rounded-[3rem] border-[8px] border-gray-700 shadow-2xl relative overflow-hidden flex flex-col mt-8 group">
+                    <div class="bg-gray-900 text-gray-500 text-xs text-center py-2 border-b border-gray-800 uppercase tracking-widest font-bold">Mobile App Layout</div>
+                    
+                    <!-- Scrollable Mobile Content Full -->
+                    <div class="relative w-full pb-16 flex flex-col">
                         
-                        <!-- Notch / Poni HP -->
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-700 rounded-b-2xl z-30"></div>
+                        <!-- Navbar Floating -->
+                        <div class="mt-4 mx-4 w-[calc(100%-2rem)] h-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex justify-between items-center px-4 z-50 shadow-md">
+                            <div class="w-5 h-5 bg-brandVista rounded-full"></div>
+                            <div class="flex gap-2"><div class="w-6 h-6 bg-brandMindaro/80 rounded-full"></div><div class="w-6 h-6 bg-white/20 rounded-full"></div></div>
+                        </div>
                         
-                        <!-- Scrollable Mobile Content -->
-                        <div class="relative z-10 flex flex-col h-full pt-10 overflow-y-auto wireframe-scroll bg-gray-900">
-                            
-                            <!-- Navbar Floating -->
-                            <div class="sticky top-2 mx-4 w-[calc(100%-2rem)] h-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-full flex justify-between items-center px-4 z-50 shadow-md">
-                                <div class="w-5 h-5 bg-brandVista rounded-full"></div>
-                                <div class="flex gap-2"><div class="w-6 h-6 bg-brandMindaro/80 rounded-full"></div><div class="w-6 h-6 bg-white/20 rounded-full"></div></div>
-                            </div>
-                            
-                            <!-- 1. Hero Mobile -->
-                            <div class="px-5 py-10 flex flex-col items-center text-center border-b border-gray-800 -mt-10 pt-16">
-                                <div class="absolute top-0 right-0 w-32 h-32 bg-brandMindaro/20 rounded-full blur-2xl z-[-1] pointer-events-none"></div>
-                                <div class="w-24 h-5 bg-brandButter/80 rounded-full mb-5"></div>
-                                <div class="w-full h-8 bg-brandSky rounded-md mb-2"></div>
-                                <div class="w-3/4 h-8 bg-brandVista rounded-md mb-4"></div>
-                                <div class="space-y-2 w-full mb-8"><div class="w-full h-2 bg-gray-600 rounded"></div><div class="w-2/3 h-2 bg-gray-600 rounded mx-auto"></div></div>
-                                <div class="w-full space-y-3"><div class="w-full h-10 bg-brandDark rounded-full"></div><div class="w-full h-10 border border-gray-600 rounded-full"></div></div>
-                            </div>
+                        <!-- 1. Hero Mobile -->
+                        <div class="px-5 py-10 flex flex-col items-center text-center border-b border-gray-800 mt-4">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-brandMindaro/20 rounded-full blur-2xl z-[-1] pointer-events-none"></div>
+                            <div class="w-24 h-5 bg-brandButter/80 rounded-full mb-5"></div>
+                            <div class="w-full h-8 bg-brandSky rounded-md mb-2"></div>
+                            <div class="w-3/4 h-8 bg-brandVista rounded-md mb-4"></div>
+                            <div class="space-y-2 w-full mb-8"><div class="w-full h-2 bg-gray-600 rounded"></div><div class="w-2/3 h-2 bg-gray-600 rounded mx-auto"></div></div>
+                            <div class="w-full space-y-3"><div class="w-full h-10 bg-brandDark rounded-full"></div><div class="w-full h-10 border border-gray-600 rounded-full"></div></div>
+                        </div>
 
-                            <!-- 2. About Mobile -->
-                            <div class="px-5 py-10 flex flex-col items-center border-b border-gray-800">
-                                <div class="w-32 h-6 bg-brandSky rounded mb-3"></div><div class="w-48 h-2 bg-gray-600 rounded mb-8"></div>
-                                <div class="w-full h-40 bg-white/5 border border-dashed border-gray-600 rounded-2xl mb-6 flex items-center justify-center text-xl">📸</div>
-                                <div class="w-full space-y-4 mb-6">
-                                    <div class="bg-white/5 rounded-2xl p-4"><div class="w-12 h-3 bg-brandButter rounded mb-3"></div><div class="w-full h-2 bg-gray-600 rounded mb-1.5"></div><div class="w-5/6 h-2 bg-gray-600 rounded"></div></div>
-                                    <div class="bg-white/5 rounded-2xl p-4"><div class="w-12 h-3 bg-brandButter rounded mb-3"></div><div class="w-full h-2 bg-gray-600 rounded mb-1.5"></div><div class="w-5/6 h-2 bg-gray-600 rounded"></div></div>
-                                </div>
-                                <div class="w-full bg-white/5 rounded-2xl p-5 border border-white/5 text-center">
-                                    <div class="w-12 h-12 bg-white/10 rounded-xl mx-auto mb-4"></div>
-                                    <div class="w-32 h-3 bg-brandSky rounded mx-auto mb-2"></div>
-                                    <div class="w-full h-1.5 bg-gray-600 rounded mb-1"></div><div class="w-2/3 h-1.5 bg-gray-600 rounded mx-auto"></div>
-                                </div>
+                        <!-- 2. About Mobile -->
+                        <div class="px-5 py-10 flex flex-col items-center border-b border-gray-800">
+                            <div class="w-32 h-6 bg-brandSky rounded mb-3"></div><div class="w-48 h-2 bg-gray-600 rounded mb-8"></div>
+                            <div class="w-full h-40 bg-white/5 border border-dashed border-gray-600 rounded-2xl mb-6 flex items-center justify-center text-xl">📸</div>
+                            <div class="w-full space-y-4 mb-6">
+                                <div class="bg-white/5 rounded-2xl p-4"><div class="w-12 h-3 bg-brandButter rounded mb-3"></div><div class="w-full h-2 bg-gray-600 rounded mb-1.5"></div><div class="w-5/6 h-2 bg-gray-600 rounded"></div></div>
+                                <div class="bg-white/5 rounded-2xl p-4"><div class="w-12 h-3 bg-brandButter rounded mb-3"></div><div class="w-full h-2 bg-gray-600 rounded mb-1.5"></div><div class="w-5/6 h-2 bg-gray-600 rounded"></div></div>
                             </div>
-
-                            <!-- 3. News Mobile -->
-                            <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
-                                <div class="w-24 h-6 bg-brandSky rounded mb-3"></div><div class="w-40 h-2 bg-gray-600 rounded mb-8"></div>
-                                <div class="w-full h-32 bg-white/10 rounded-2xl border border-white/10 mb-4 flex flex-col justify-end p-3"><div class="w-full h-3 bg-gray-400 rounded mb-2"></div><div class="w-1/2 h-1.5 bg-gray-600 rounded"></div></div>
-                                <div class="w-full h-32 bg-white/10 rounded-2xl border border-white/10 mb-4 flex flex-col justify-end p-3"><div class="w-full h-3 bg-gray-400 rounded mb-2"></div><div class="w-1/2 h-1.5 bg-gray-600 rounded"></div></div>
-                                <div class="w-32 h-8 border border-white/20 rounded-full mx-auto mt-2"></div>
-                            </div>
-
-                            <!-- 4. Company Profile Mobile -->
-                            <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center bg-white/5">
-                                <div class="w-40 h-6 bg-brandVista rounded mb-3"></div><div class="w-48 h-2 bg-gray-600 rounded mb-8"></div>
-                                <div class="w-full bg-white/10 rounded-3xl p-5 mb-6 shadow-lg">
-                                    <div class="w-full h-24 bg-white/5 border border-dashed border-gray-500 rounded-xl mb-4 flex items-center justify-center">👔</div>
-                                    <div class="w-24 h-3 bg-gray-400 rounded mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded mb-1"></div><div class="w-5/6 h-1.5 bg-gray-600 rounded"></div>
-                                </div>
-                                <div class="grid grid-cols-2 gap-3 w-full">
-                                    <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
-                                    <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
-                                    <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
-                                    <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- 5. Marketplace Mobile -->
-                            <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
-                                <div class="w-48 h-6 bg-brandButter/80 rounded mb-3"></div><div class="w-40 h-2 bg-gray-600 rounded mb-8"></div>
-                                <div class="grid grid-cols-2 gap-4 w-full">
-                                    <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                    <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                    <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                    <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
-                                </div>
-                            </div>
-
-                            <!-- 6. SOP Mobile -->
-                            <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
-                                <div class="w-40 h-6 bg-brandMindaro/80 rounded mb-3"></div><div class="w-48 h-2 bg-gray-600 rounded mb-8"></div>
-                                <div class="w-full space-y-4">
-                                    <div class="h-20 bg-white/5 rounded-2xl border-t-2 border-brandVista flex items-center px-4 gap-4"><div class="w-10 h-10 bg-white/10 rounded-lg"></div><div><div class="w-24 h-3 bg-gray-400 rounded mb-1"></div><div class="w-32 h-1.5 bg-gray-600 rounded"></div></div></div>
-                                    <div class="h-20 bg-white/5 rounded-2xl border-t-2 border-brandMindaro flex items-center px-4 gap-4"><div class="w-10 h-10 bg-white/10 rounded-lg"></div><div><div class="w-24 h-3 bg-gray-400 rounded mb-1"></div><div class="w-32 h-1.5 bg-gray-600 rounded"></div></div></div>
-                                </div>
-                            </div>
-
-                            <!-- 7. Footer Mobile -->
-                            <div class="px-5 py-8 bg-brandDark/50 border-t-4 border-brandVista flex flex-col items-center text-center gap-4">
-                                <div class="w-32 h-5 bg-gray-400 rounded mb-2"></div>
-                                <div class="flex gap-3"><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div></div>
-                                <div class="w-full h-1 bg-gray-600 rounded mt-2"></div>
-                                <div class="w-48 h-2 bg-gray-600 rounded mt-2"></div>
+                            <div class="w-full bg-white/5 rounded-2xl p-5 border border-white/5 text-center">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl mx-auto mb-4"></div>
+                                <div class="w-32 h-3 bg-brandSky rounded mx-auto mb-2"></div>
+                                <div class="w-full h-1.5 bg-gray-600 rounded mb-1"></div><div class="w-2/3 h-1.5 bg-gray-600 rounded mx-auto"></div>
                             </div>
                         </div>
+
+                        <!-- 3. News Mobile -->
+                        <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
+                            <div class="w-24 h-6 bg-brandSky rounded mb-3"></div><div class="w-40 h-2 bg-gray-600 rounded mb-8"></div>
+                            <div class="w-full h-32 bg-white/10 rounded-2xl border border-white/10 mb-4 flex flex-col justify-end p-3"><div class="w-full h-3 bg-gray-400 rounded mb-2"></div><div class="w-1/2 h-1.5 bg-gray-600 rounded"></div></div>
+                            <div class="w-full h-32 bg-white/10 rounded-2xl border border-white/10 mb-4 flex flex-col justify-end p-3"><div class="w-full h-3 bg-gray-400 rounded mb-2"></div><div class="w-1/2 h-1.5 bg-gray-600 rounded"></div></div>
+                            <div class="w-32 h-8 border border-white/20 rounded-full mx-auto mt-2"></div>
+                        </div>
+
+                        <!-- 4. Company Profile Mobile -->
+                        <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center bg-white/5">
+                            <div class="w-40 h-6 bg-brandVista rounded mb-3"></div><div class="w-48 h-2 bg-gray-600 rounded mb-8"></div>
+                            <div class="w-full bg-white/10 rounded-3xl p-5 mb-6 shadow-lg">
+                                <div class="w-full h-24 bg-white/5 border border-dashed border-gray-500 rounded-xl mb-4 flex items-center justify-center">👔</div>
+                                <div class="w-24 h-3 bg-gray-400 rounded mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded mb-1"></div><div class="w-5/6 h-1.5 bg-gray-600 rounded"></div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 w-full">
+                                <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
+                                <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
+                                <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
+                                <div class="bg-white/5 rounded-2xl p-3 border border-white/5"><div class="w-16 h-2 bg-brandSky rounded mb-3"></div><div class="w-full h-10 bg-white/10 rounded-lg mb-2"></div><div class="w-full h-1.5 bg-gray-600 rounded"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Marketplace Mobile -->
+                        <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
+                            <div class="w-48 h-6 bg-brandButter/80 rounded mb-3"></div><div class="w-40 h-2 bg-gray-600 rounded mb-8"></div>
+                            <div class="grid grid-cols-2 gap-4 w-full">
+                                <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                                <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                                <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                                <div class="aspect-[3/4] bg-white/5 rounded-2xl border border-white/10 flex flex-col p-3"><div class="flex-grow bg-white/5 rounded-xl mb-3"></div><div class="h-2 w-3/4 bg-gray-400 rounded mb-1"></div><div class="h-6 w-full bg-white/10 rounded-full mt-auto"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 6. SOP Mobile -->
+                        <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
+                            <div class="w-40 h-6 bg-brandMindaro/80 rounded mb-3"></div><div class="w-48 h-2 bg-gray-600 rounded mb-8"></div>
+                            <div class="w-full space-y-4">
+                                <div class="h-20 bg-white/5 rounded-2xl border-t-2 border-brandVista flex items-center px-4 gap-4"><div class="w-10 h-10 bg-white/10 rounded-lg"></div><div><div class="w-24 h-3 bg-gray-400 rounded mb-1"></div><div class="w-32 h-1.5 bg-gray-600 rounded"></div></div></div>
+                                <div class="h-20 bg-white/5 rounded-2xl border-t-2 border-brandMindaro flex items-center px-4 gap-4"><div class="w-10 h-10 bg-white/10 rounded-lg"></div><div><div class="w-24 h-3 bg-gray-400 rounded mb-1"></div><div class="w-32 h-1.5 bg-gray-600 rounded"></div></div></div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Footer Mobile -->
+                        <div class="px-5 py-8 bg-brandDark/50 border-t-4 border-brandVista flex flex-col items-center text-center gap-4">
+                            <div class="w-32 h-5 bg-gray-400 rounded mb-2"></div>
+                            <div class="flex gap-3"><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div></div>
+                            <div class="w-full h-1 bg-gray-600 rounded mt-2"></div>
+                            <div class="w-48 h-2 bg-gray-600 rounded mt-2"></div>
+                        </div>
+                        
                     </div>
                 </div>
 

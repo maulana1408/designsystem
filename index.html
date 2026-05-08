@@ -45,6 +45,11 @@
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
+        /* Custom Scrollbar untuk Wireframe & Horizontal Scroll */
+        .wireframe-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+        .wireframe-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
+        .wireframe-scroll::-webkit-scrollbar-thumb { background-color: rgba(124, 158, 217, 0.4); border-radius: 10px; }
+        .wireframe-scroll::-webkit-scrollbar-thumb:hover { background-color: rgba(124, 158, 217, 0.8); }
     </style>
 </head>
 <body class="p-4 sm:p-8 md:p-12 text-gray-200 antialiased font-sans">
@@ -59,7 +64,7 @@
                 <p class="text-gray-400 font-medium">Design System, Checkout Flow & Full Layout Guidelines</p>
             </div>
             <div class="text-left md:text-right relative z-10">
-                <p class="text-sm text-gray-500 font-mono">Version 5.0 (Figma Ready - Flat Layout)</p>
+                <p class="text-sm text-gray-500 font-mono">Version 5.1 (Sequential Layouts)</p>
                 <p class="text-sm text-brandMindaro font-mono">Glassmorphism Premium</p>
             </div>
         </div>
@@ -241,11 +246,11 @@
             </div>
         </div>
 
-        <!-- SECTION 3: LANDING PAGE LAYOUTS (FLAT / TERBUKA) -->
+        <!-- SECTION 3: LANDING PAGE LAYOUTS (FLAT / TERBUKA BERURUTAN) -->
         <div class="space-y-6 pb-20">
             <div class="flex flex-col pl-3 border-l-4 border-brandMindaro gap-2 mb-8">
                 <h2 class="text-2xl font-bold text-gray-400 uppercase tracking-widest">3. Complete Landing Page Layouts</h2>
-                <p class="text-xs text-brandMindaro">Rendered full-height untuk konversi Figma (Tanpa Mockup Device)</p>
+                <p class="text-xs text-brandMindaro">Semua seksi diurutkan penuh ke bawah secara berurutan sesuai sitemap</p>
             </div>
             
             <div class="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
@@ -265,7 +270,7 @@
                             <div class="w-8 h-8 bg-white/20 rounded-full"></div>
                         </div>
                         
-                        <!-- 1. Hero Section -->
+                        <!-- 1. Beranda / Hero Section -->
                         <div class="min-h-[450px] w-full relative flex flex-col justify-center px-12 border-b border-gray-800 pt-8">
                             <div class="absolute top-10 right-20 w-64 h-64 bg-brandMindaro/20 rounded-full blur-3xl pointer-events-none"></div>
                             <div class="w-full grid grid-cols-2 gap-8 items-center relative z-10">
@@ -354,18 +359,41 @@
                             </div>
                         </div>
 
-                        <!-- 6. SOP Section -->
+                        <!-- 6. SOP Partnership Section -->
+                        <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center">
+                            <div class="w-64 h-10 bg-brandVista/80 rounded-lg mb-4"></div>
+                            <div class="w-72 h-3 bg-gray-600 rounded mb-12"></div>
+                            
+                            <div class="w-full max-w-2xl bg-white/5 rounded-3xl border-t-4 border-brandVista p-10 flex flex-col items-center text-center shadow-lg">
+                                <div class="w-20 h-20 bg-brandVista/20 rounded-2xl mb-6 flex items-center justify-center text-3xl">🤝</div>
+                                <div class="w-64 h-5 bg-gray-400 rounded mb-4"></div>
+                                <div class="w-full h-2 bg-gray-500 rounded mb-2"></div>
+                                <div class="w-3/4 h-2 bg-gray-500 rounded mb-10"></div>
+                                <div class="flex gap-4 w-full justify-center">
+                                    <div class="w-40 h-12 bg-brandVista rounded-xl"></div>
+                                    <div class="w-40 h-12 border border-brandVista rounded-xl"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. SOP Medinfo Section -->
                         <div class="py-20 px-16 border-b border-gray-800 flex flex-col items-center">
                             <div class="w-56 h-10 bg-brandMindaro/80 rounded-lg mb-4"></div>
                             <div class="w-64 h-3 bg-gray-600 rounded mb-12"></div>
                             
-                            <div class="grid grid-cols-2 gap-8 w-full">
-                                <div class="h-32 bg-white/10 rounded-3xl border-t-4 border-brandVista p-6 flex flex-col items-center justify-center gap-3"><div class="w-10 h-10 bg-white/10 rounded-xl"></div><div class="w-1/2 h-3 bg-gray-400 rounded"></div></div>
-                                <div class="h-32 bg-white/10 rounded-3xl border-t-4 border-brandMindaro p-6 flex flex-col items-center justify-center gap-3"><div class="w-10 h-10 bg-white/10 rounded-xl"></div><div class="w-1/2 h-3 bg-gray-400 rounded"></div></div>
+                            <div class="w-full max-w-2xl bg-white/5 rounded-3xl border-t-4 border-brandMindaro p-10 flex flex-col items-center text-center shadow-lg">
+                                <div class="w-20 h-20 bg-brandMindaro/20 rounded-2xl mb-6 flex items-center justify-center text-3xl">📱</div>
+                                <div class="w-56 h-5 bg-gray-400 rounded mb-4"></div>
+                                <div class="w-full h-2 bg-gray-500 rounded mb-2"></div>
+                                <div class="w-3/4 h-2 bg-gray-500 rounded mb-10"></div>
+                                <div class="flex gap-4 w-full justify-center">
+                                    <div class="w-40 h-12 bg-brandMindaro rounded-xl"></div>
+                                    <div class="w-40 h-12 border border-brandMindaro rounded-xl"></div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 7. Footer -->
+                        <!-- 8. Footer -->
                         <div class="py-16 px-16 bg-brandDark/50 border-t-4 border-brandVista">
                             <div class="flex justify-between items-center mb-8"><div class="w-40 h-8 bg-gray-400 rounded"></div><div class="flex gap-3"><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div></div></div>
                             <div class="w-full border-t border-gray-600 pt-6 flex justify-between"><div class="w-48 h-3 bg-gray-600 rounded"></div><div class="w-24 h-3 bg-gray-600 rounded"></div></div>
@@ -388,7 +416,7 @@
                             <div class="flex gap-2"><div class="w-6 h-6 bg-brandMindaro/80 rounded-full"></div><div class="w-6 h-6 bg-white/20 rounded-full"></div></div>
                         </div>
                         
-                        <!-- 1. Hero Mobile -->
+                        <!-- 1. Beranda / Hero Mobile -->
                         <div class="px-5 py-10 flex flex-col items-center text-center border-b border-gray-800 mt-4">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-brandMindaro/20 rounded-full blur-2xl z-[-1] pointer-events-none"></div>
                             <div class="w-24 h-5 bg-brandButter/80 rounded-full mb-5"></div>
@@ -447,16 +475,37 @@
                             </div>
                         </div>
 
-                        <!-- 6. SOP Mobile -->
+                        <!-- 6. SOP Partnership Mobile -->
                         <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
-                            <div class="w-40 h-6 bg-brandMindaro/80 rounded mb-3"></div><div class="w-48 h-2 bg-gray-600 rounded mb-8"></div>
-                            <div class="w-full space-y-4">
-                                <div class="h-20 bg-white/5 rounded-2xl border-t-2 border-brandVista flex items-center px-4 gap-4"><div class="w-10 h-10 bg-white/10 rounded-lg"></div><div><div class="w-24 h-3 bg-gray-400 rounded mb-1"></div><div class="w-32 h-1.5 bg-gray-600 rounded"></div></div></div>
-                                <div class="h-20 bg-white/5 rounded-2xl border-t-2 border-brandMindaro flex items-center px-4 gap-4"><div class="w-10 h-10 bg-white/10 rounded-lg"></div><div><div class="w-24 h-3 bg-gray-400 rounded mb-1"></div><div class="w-32 h-1.5 bg-gray-600 rounded"></div></div></div>
+                            <div class="w-48 h-6 bg-brandVista/80 rounded mb-3"></div><div class="w-56 h-2 bg-gray-600 rounded mb-8"></div>
+                            <div class="w-full bg-white/5 rounded-2xl border-t-4 border-brandVista p-6 flex flex-col items-center text-center shadow-lg">
+                                <div class="w-16 h-16 bg-brandVista/20 rounded-xl mb-4 flex items-center justify-center text-2xl">🤝</div>
+                                <div class="w-48 h-4 bg-gray-400 rounded mb-3"></div>
+                                <div class="w-full h-1.5 bg-gray-500 rounded mb-2"></div>
+                                <div class="w-3/4 h-1.5 bg-gray-500 rounded mb-6"></div>
+                                <div class="flex flex-col gap-2 w-full">
+                                    <div class="w-full h-10 bg-brandVista rounded-lg"></div>
+                                    <div class="w-full h-10 border border-brandVista rounded-lg"></div>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 7. Footer Mobile -->
+                        <!-- 7. SOP Medinfo Mobile -->
+                        <div class="px-5 py-10 border-b border-gray-800 flex flex-col items-center">
+                            <div class="w-40 h-6 bg-brandMindaro/80 rounded mb-3"></div><div class="w-56 h-2 bg-gray-600 rounded mb-8"></div>
+                            <div class="w-full bg-white/5 rounded-2xl border-t-4 border-brandMindaro p-6 flex flex-col items-center text-center shadow-lg">
+                                <div class="w-16 h-16 bg-brandMindaro/20 rounded-xl mb-4 flex items-center justify-center text-2xl">📱</div>
+                                <div class="w-40 h-4 bg-gray-400 rounded mb-3"></div>
+                                <div class="w-full h-1.5 bg-gray-500 rounded mb-2"></div>
+                                <div class="w-3/4 h-1.5 bg-gray-500 rounded mb-6"></div>
+                                <div class="flex flex-col gap-2 w-full">
+                                    <div class="w-full h-10 bg-brandMindaro rounded-lg"></div>
+                                    <div class="w-full h-10 border border-brandMindaro rounded-lg"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. Footer Mobile -->
                         <div class="px-5 py-8 bg-brandDark/50 border-t-4 border-brandVista flex flex-col items-center text-center gap-4">
                             <div class="w-32 h-5 bg-gray-400 rounded mb-2"></div>
                             <div class="flex gap-3"><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div><div class="w-8 h-8 bg-gray-500 rounded-full"></div></div>
